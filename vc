@@ -1,0 +1,46 @@
+Enter file contents here<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>  #include<iostream.h>
+int main()
+{int m,n,s,a,b,t;
+cin>>m>>n;
+a=m;b=n;
+if(m>=n)
+{s=m%n;
+while(s!=0)
+{m=n;n=s;s=m%n;}
+t=n;
+cout<<t<<' '<<a*b/t;}
+else
+{s=n%m;
+while(s!=0)
+{n=m;m=s;s=n%m;}
+t=m;
+cout<<t<<' '<<a*b/t;}
+}
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>  #include<iostream.h>
+#include<math.h>
+int main()
+{int m,i,a,b,c,s;
+cin>>m;
+for(i=(m+1);i<=999;i++)
+{
+a=i%10;
+b=i/100;
+c=(i-100*b)/10;
+s=pow(a,3)+pow(b,3)+pow(c,3);
+if(s==i)
+cout<<i<<' ';
+}
+}
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>  #include<iostream.h>
+int main()
+{int m,i,j,s;
+cin>>m;
+for(i=2;i<m;i++)
+{s=0;
+	for(j=1;j<i;j++)
+{if(i%j==0)
+s=s+j;}
+if(s==i)
+cout<<i<<' ';
+}
+}
